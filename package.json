@@ -1,0 +1,28 @@
+{
+  "name": "bookmark-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaosiwen1949/bookmark-manager.git"
+  },
+  "keywords": [
+    "bookmark"
+  ],
+  "author": "caoyasong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhaosiwen1949/bookmark-manager/issues"
+  },
+  "homepage": "https://github.com/zhaosiwen1949/bookmark-manager#readme",
+  "dependencies": {
+    "preact": "^8.3.1",
+    "preact-compat": "^3.18.3",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}
