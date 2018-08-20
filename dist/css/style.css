@@ -3,6 +3,8 @@ body {
     height: 200px;
 }
 
-div {
-    background-color: red;
+.header {
+    background-color: green;
+    height: 100px;
+    width: 100%;
 }
