@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -21,5 +22,14 @@ module.exports = {
             use: 'babel-loader'
         }]
     },
-    devtool: "eval-source-map"
+    devtool: "eval-source-map",
+    plugins: [
+        new CopyWebpackPlugin([ 
+           {from: "./src/css/", to:"./css/"},
+           {from: "./src/images/", to:"./images/"},
+           {from: "./src/js/", to:"./js/"},
+           {from: "./src/manifest.json", to:"./manifest.json"},
+           {from: "./src/popup.html", to:"./popup.html"},
+        ])
+    ]
 }
