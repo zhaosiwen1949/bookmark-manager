@@ -10,9 +10,12 @@ const SubFolderItem = ({title, data, onNext, onAdd}) => {
     }
 
     return (
-        <div>
-            <span onClick={onAddClick} >{title}</span>
-            <span onClick={onNextClick} >+++</span>
+        <div class="sub-folder-item">
+            <div class="sub-folder-item-folw">
+                <div class="sub-folder-item-foli"></div>
+                <div class="sub-folder-item-folt sub-folder-item-text" onClick={onAddClick} >{title}</div>
+            </div>
+            <div class="sub-folder-item-fold" onClick={onNextClick} ></div>
         </div>
     );
 }

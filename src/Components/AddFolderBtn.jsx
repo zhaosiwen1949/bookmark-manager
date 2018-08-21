@@ -1,10 +1,10 @@
 import React from 'react';
 
-const AddFolderBtn = ({onAddFolder}) => {
+const AddFolderBtn = ({title, onAddFolder}) => {
     return (
-        <div>
-            <span>添加文件夹</span>
-            <span onClick={onAddFolder} >^_^</span>
+        <div class="add-folder-btn">
+            <div class="add-folder-btn-grpt add-folder-btn-text">{`添加到文件夹${title}`}</div>
+            <div class="add-folder-btn-arw" onClick={onAddFolder} ></div>
         </div>
     );
 }

@@ -2,9 +2,9 @@ import React from 'react';
 
 const CurrentFolder = ({title, onPre}) => {
     return (
-        <div>
-            <span onClick={onPre} >---</span>
-            <span>{title}</span>
+        <div class="current-folder">
+            <span class="current-folder-dup" onClick={onPre} >---</span>
+            <span class="current-folder-ntit">{title}</span>
         </div>
     );
 }

@@ -3,7 +3,7 @@ import SubFolderItem from './SubFolderItem';
 
 const SubFoldersList = ({listData, onAddBookmark, onNextBookmark}) => {
     return (
-        <div>
+        <div class="sub-folder-list">
             { listData.map((data)=>{
                 return <SubFolderItem title={data.title} data={data} onAdd={onAddBookmark} onNext={onNextBookmark} />
             }) }
