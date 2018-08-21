@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -24,6 +25,9 @@ module.exports = {
     },
     devtool: "eval-source-map",
     plugins: [
+        new CleanWebpackPlugin(['dist'],{
+            root: __dirname,
+        }),
         new CopyWebpackPlugin([ 
            {from: "./src/css/", to:"./css/"},
            {from: "./src/images/", to:"./images/"},

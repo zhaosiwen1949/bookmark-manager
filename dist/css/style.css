@@ -3,8 +3,84 @@ body {
     height: 200px;
 }
 
-.header {
+.header-btn {
     background-color: green;
-    height: 100px;
+    height: 126px;
     width: 100%;
+    position: relative;
+}
+
+.header-btn-cover {
+    height: 41px;
+    position: absolute;
+    text-align: center;
+    top: 34px;
+    width: 100%;
+}
+
+.header-btn-innero {
+    background-color: rgba(43, 43, 43, 0.9);
+    border-radius: 20px;
+    display: inline-block;
+    -webkit-user-select: none;
+}
+
+.header-btn-conft {
+    color: #fff;
+    font-size: 12px;
+    height: 41px;
+    line-height: 41px;
+    max-width: 134px;
+    overflow: hidden;
+    padding-top: 0px;
+    padding-right: 5px;
+    padding-bottom: 0;
+    padding-left: 10px;
+    position: relative;
+    text-align: left;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.header-btn-text {
+    color: inherit;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    position: absolute;
+    -webkit-transition: color 300ms ease-in-out;
+}
+
+.header-btn-vers {
+    border-left: 1px solid #fff;
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    top: -4px;
+}
+
+.header-btn-confi {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwM…2c+PGcgZGlzcGxheT0ibm9uZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwtOSkiLz48L3N2Zz4);
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 29px;
+    margin-top: 6px;
+    margin-right: 5px;
+    margin-bottom: 0;
+    margin-left: 4px;
+    width: 29px;
+    -webkit-transition: background-color 200ms ease-in-out;
+}
+
+.header-btn-icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 24px;
+    margin: 4px 6px;
+    width: 24px;
 }

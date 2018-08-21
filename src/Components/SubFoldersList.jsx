@@ -5,7 +5,7 @@ const SubFoldersList = ({listData, onAddBookmark, onNextBookmark}) => {
     return (
         <div>
             { listData.map((data)=>{
-                return <SubFolderItem onAdd={onAddBookmark} onNext={onNextBookmark} />
+                return <SubFolderItem title={data.title} data={data} onAdd={onAddBookmark} onNext={onNextBookmark} />
             }) }
         </div>
     );

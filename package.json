@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --watch --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/zhaosiwen1949/bookmark-manager#readme",
   "dependencies": {
+    "clean-webpack-plugin": "^0.1.19",
     "preact": "^8.3.1",
     "preact-compat": "^3.18.3"
   },
