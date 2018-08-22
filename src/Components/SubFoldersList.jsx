@@ -1,4 +1,5 @@
 import React from 'react';
+import pure from 'recompose/pure';
 import SubFolderItem from './SubFolderItem';
 
 const SubFoldersList = ({listData, onAddBookmark, onNextBookmark}) => {
@@ -11,4 +12,4 @@ const SubFoldersList = ({listData, onAddBookmark, onNextBookmark}) => {
     );
 }
  
-export default SubFoldersList;
+export default pure(SubFoldersList);

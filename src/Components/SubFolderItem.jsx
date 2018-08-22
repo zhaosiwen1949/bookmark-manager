@@ -1,4 +1,5 @@
 import React from 'react';
+import pure from 'recompose/pure';
 
 const SubFolderItem = ({title, data, onNext, onAdd}) => {
     const onNextClick = (e) => {
@@ -20,4 +21,4 @@ const SubFolderItem = ({title, data, onNext, onAdd}) => {
     );
 }
  
-export default SubFolderItem;
+export default pure(SubFolderItem);

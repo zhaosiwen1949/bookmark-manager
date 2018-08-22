@@ -1,12 +1,13 @@
 import React from 'react';
+import pure from 'recompose/pure';
 
-const CreateFolder = ({onSearch, onCreate}) => {
+const CreateFolder = ({folderName, onSearchFolder, onCreateFolder}) => {
     return (
         <div class="create-folder">
-            <input class="create-folder-inpf create-folder-text" type="text" onInput={onSearch} />
-            <span class="create-folder-cref create-folder-text" onClick={onCreate} >创建</span>
+            <input class="create-folder-inpf create-folder-text" type="text" onChange={onSearchFolder} value={folderName} />
+            <span class="create-folder-cref create-folder-text" onClick={onCreateFolder} >创建</span>
         </div>
     );
 }
  
-export default CreateFolder;
+export default pure(CreateFolder);

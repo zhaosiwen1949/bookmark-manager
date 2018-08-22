@@ -1,4 +1,6 @@
 import React from 'react';
+import pure from 'recompose/pure';
+
 const HeaderBtn = ({title,onDelete}) => {
     return (
         <div class="header-btn">
@@ -13,4 +15,4 @@ const HeaderBtn = ({title,onDelete}) => {
     );
 }
  
-export default HeaderBtn;
+export default pure(HeaderBtn);

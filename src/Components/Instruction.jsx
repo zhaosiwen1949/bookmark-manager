@@ -1,4 +1,5 @@
 import React from 'react';
+import pure from 'recompose/pure';
 
 const Instruction = ({title, url}) => {
     return (
@@ -9,4 +10,4 @@ const Instruction = ({title, url}) => {
     );
 }
  
-export default Instruction;
+export default pure(Instruction);

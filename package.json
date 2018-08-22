@@ -21,8 +21,10 @@
   "homepage": "https://github.com/zhaosiwen1949/bookmark-manager#readme",
   "dependencies": {
     "clean-webpack-plugin": "^0.1.19",
+    "fuzzyset.js": "0.0.7",
     "preact": "^8.3.1",
-    "preact-compat": "^3.18.3"
+    "preact-compat": "^3.18.3",
+    "recompose": "^0.28.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
