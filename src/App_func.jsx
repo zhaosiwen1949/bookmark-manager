@@ -63,36 +63,48 @@ const App = compose(
         },
     }),
     withHandlers({
-        onAddFolder: ({ setState }) => () => {
+        onAddFolder: ({ setState, changeFolderData, currentFolderData }) => () => {
             setState("Adding");
+            if (currentFolderData.parentId !== "0" && currentFolderData.parentId !== undefined) {
+                changeFolderData(currentFolderData.parentId);
+            }
         },
         onSearchFolder: ({ setFolderName }) => (e) => {
             const folderName = e.target.value;
             setFolderName(folderName);
         },
-        onCreateFolder: ({ setFolderName, setState, changeFolderData, folderName, currentFolderData }) => () => {
+        onCreateFolder: ({ setFolderName, setState, changeFolderData, folderName, currentFolderData, currentPageData }) => () => {
             chrome.bookmarks.create({
                 parentId: currentFolderData.id,
                 title: folderName,
                 index: 0
-            }, (data) => {
+            }, (newFolder) => {
                 console.log("文件夹添加成功");
-                console.log(data);
-                changeFolderData(currentFolderData.id);
+                console.log(newFolder);
+                chrome.bookmarks.create({
+                    parentId: newFolder.id,
+                    title: currentPageData.title,
+                    url: currentPageData.url
+                },(newBookmark) => {
+                    console.log("书签添加成功");
+                    console.log(newBookmark);
+                    changeFolderData(newFolder.id);
+                });
             });
             setFolderName("");
             setState("Added");
         },
-        onNextBookmark: ({ changeFolderData }) => (bookmarkData) => {
+        onNextBookmark: ({ changeFolderData, setFolderName }) => (bookmarkData) => {
             changeFolderData(bookmarkData.id);
+            setFolderName("");
         },
-        onPreBookmark: ({ changeFolderData, currentFolderData }) => () => {
+        onPreBookmark: ({ changeFolderData, currentFolderData, setFolderName }) => () => {
             if(currentFolderData.parentId !== "0" && currentFolderData.parentId !== undefined){
                 changeFolderData(currentFolderData.parentId);
+                setFolderName("");
             }
         },
-        onAddBookmark: ({ setState, currentPageData }) => (data) => {
-            setState("Added");
+        onAddBookmark: ({ setState, changeFolderData, currentPageData }) => (data) => {
             console.log("添加到文件夹");
             console.log(data);
             const { title, url } = currentPageData;
@@ -100,9 +112,11 @@ const App = compose(
                 parentId: data.id,
                 title: title,
                 url: url
-            },(data) => {
+            },(newBookmark) => {
                 console.log("书签添加成功");
-                console.log(data);
+                console.log(newBookmark);
+                changeFolderData(data.id);
+                setState("Added");
             });
         }
     }),
