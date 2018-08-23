@@ -104,12 +104,13 @@ body {
     cursor: inherit;
     font-family: inherit;
     outline: none;
-    overflow: hidden;
     padding-left: 5px;
     padding-right: 5px;
     resize: none;
     position: relative;
+    overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
     -webkit-box-sizing: border-box;
 }
 
@@ -136,7 +137,7 @@ body {
     height: 24px;
     margin-top: 0px;
     margin-right: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     margin-left: 5px;
     padding-bottom: 0;
     padding-top: 0;
